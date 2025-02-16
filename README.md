@@ -39,7 +39,7 @@ mv ModelZoo-PyTorch/MindIE/MultiModal/Janus-Pro/* ./Janus_Pro
 rm -rf ModelZoo-PyTorch
 
 # 安装依赖
-cd Janus_pro
+cd Janus_Pro
 pip install -e .
 cd ..
 ```
@@ -57,7 +57,12 @@ python fastapi_app.py --path='weight/Janus-Pro-1B' --device_id=0
 ```
 
 ### 2.2 发送请求
-修改fastapi_client.py中的understand_image_and_question_url, understand_question_url, image_path, question字段, 然后执行:  
+在fastapi_client.py中, 修改:  
+ip_of_your_server: 服务端ip地址  
+image_path: 客户端图片地址, 若不需要识别图片, 此变量设为空字符串""  
+question: 输入的问题  
+  
+修改完后, 执行:  
 ```bash
 python fastapi_client.py
 ```

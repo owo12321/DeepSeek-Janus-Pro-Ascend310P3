@@ -1,12 +1,16 @@
 import requests
-# 将ip.of.your.server改成服务端ip地址
-understand_image_and_question_url = "http://ip.of.your.server:8000/understand_image_and_question/"
-understand_question_url = "http://ip.of.your.server:8000/understand_question/"
 
-# image_path为客户端图片地址, 若不使用图片, 将image_path设置为空字符串
-image_path = "./images/deepseek_logo.png"
+# 将ip.of.your.server改成服务端ip地址
+ip_of_your_server = "192.168.31.175"#"ip.of.your.server"
+# image_path为客户端图片地址, 若不使用图片, 将image_path设置为空字符串""
+image_path = "./images/deepseek_logo.png"   # ""
 # 输入字符串
 question = "用中文描述这张图里是什么？"
+
+
+
+understand_image_and_question_url = f"http://{ip_of_your_server}:8000/understand_image_and_question/"
+understand_question_url = f"http://{ip_of_your_server}:8000/understand_question/"
 
 # Function to call the image understanding endpoint
 def understand_image_and_question(image_path, question):
@@ -23,8 +27,6 @@ def understand_image_and_question(image_path, question):
         response = requests.post(understand_question_url, data=data)
     response_data = response.json()
     print("[Response]: ", response_data['response'])
-
-
 
 # Example usage
 if __name__ == "__main__":
