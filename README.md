@@ -1,4 +1,4 @@
-# Janus-Pro-Ascend310P3
+# DeepSeek-Janus-Pro-Ascend310P3
 
 在华为昇腾310P3推理卡上使用mindie运行deepseek-Janus-Pro, 并部署服务化接口  
 代码来源于https://gitee.com/ascend/ModelZoo-PyTorch/tree/master/MindIE/MultiModal/Janus-Pro, 这份代码只适配了推理脚本inference.py, 未适配服务化推理场景.  
