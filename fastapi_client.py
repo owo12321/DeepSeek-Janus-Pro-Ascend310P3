@@ -1,7 +1,7 @@
 import requests
 
 # 将ip.of.your.server改成服务端ip地址
-ip_of_your_server = "192.168.31.175"#"ip.of.your.server"
+ip_of_your_server = "ip.of.your.server"
 # image_path为客户端图片地址, 若不使用图片, 将image_path设置为空字符串""
 image_path = "./images/deepseek_logo.png"   # ""
 # 输入字符串
